@@ -24,6 +24,8 @@ resource "azurerm_public_ip" "main" {
     allocation_method = "Static"
 }
 
+
+
 resource "azurerm_network_interface" "main" {
     name = "${var.prefix}-nic"
     location = azurerm_resource_group.main.location
@@ -71,3 +73,4 @@ resource "azurerm_virtual_machine" "main" {
         disable_password_authentication = false
     }
 }
+
